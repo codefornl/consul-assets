@@ -47,12 +47,13 @@
   var server = http.createServer(function(request, response){
     var _params = params(request);
     if (_params.set){
-      if (fs.existsSync("./" + _params.set)) {
+      var _set = path.normalize(_params.set);
+      if (fs.existsSync("./" + _set)) {
         response.writeHead(200, setHeaders(""));
         response.write("#!/bin/bash\n" +
-        "echo You requested the set: " + _params.set + " and version: " + (_params.version || "0") + ". let me see if I can get it for you\n" + 
-        "curl -s -k 'http://localhost:8080/?get=" + _params.set + "&format=zip' -o '" + _params.set + ".zip'\n" +
-        "unzip emmen.zip\nls\n");
+        "echo You requested the set: " + _set + " and version: " + (_params.version || "0") + ". let me see if I can get it for you\n" + 
+        "curl -s -k 'http://localhost:8080/?get=" + _set + "&format=zip' -o '" + _set + ".zip'\n" +
+        "unzip " + _set + ".zip\nls\n");
         response.end();
       } else {
         response.writeHead(404, setHeaders(""));
@@ -61,13 +62,14 @@
       }
     } else if(_params.get) {
       // check if the directory exists
-      if (fs.existsSync("./" + _params.get)) {
+      var _get = path.normalize(_params.get);
+      if (fs.existsSync("./" + _get)) {
         // pack the assets and send them as zip
         var archive = Archiver('zip');
         response.writeHead(200, setHeaders("zip"));
         // Send the file to the page output.
         archive.pipe(response);
-        archive.directory( _params.get, false);
+        archive.directory( _get, false);
         archive.finalize();
       } else {
         response.writeHead(404, setHeaders(""));
