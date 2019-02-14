@@ -28,7 +28,7 @@
    */
   function safePath(unsafeSuffix) {
     var _clean = path.normalize(unsafeSuffix).replace(/^(\.\.[\/\\])+/, '');
-    if(_clean.length < 3){
+    if (_clean.length < 3) {
       return ""
     } else {
       return _clean
@@ -52,6 +52,13 @@
     return _headers;
   }
 
+  function getProtocol(req) {
+    var proto = req.connection.encrypted ? 'https' : 'http';
+    // only do this if you trust the proxy
+    proto = req.headers['x-forwarded-proto'] || proto;
+    return proto.split(/\s*,\s*/)[0];
+  }
+
   /**
    * The main object.
    */
@@ -63,7 +70,7 @@
         response.writeHead(200, setHeaders(""));
         response.write("#!/bin/bash\n" +
           "echo You requested the set: " + _set + " and version: " + (_params.version || "0") + ". let me see if I can get it for you\n" +
-          "curl -s -k 'http://localhost:8080/?get=" + _set + "&format=zip' -o '" + _set + ".zip'\n" +
+          "curl -s -k '" + getProtocol(request) + "://" + request.headers.host + "/?get=" + _set + "&format=zip' -o '" + _set + ".zip'\n" +
           "unzip " + _set + ".zip\nls\n");
         response.end();
       } else {
