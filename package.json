@@ -1,0 +1,16 @@
+{
+  "name": "consul-assets",
+  "version": "1.0.0",
+  "description": "microservice to deliver a shell script to install assets into consul",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Milo van der Linden",
+  "license": "GPL-3.0+",
+  "repository": "git@github.com:codefornl/consul-assets.git",
+  "dependencies": {
+    "archiver": "^3.0.0"
+  }
+}
