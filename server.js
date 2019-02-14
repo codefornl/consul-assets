@@ -36,9 +36,15 @@
   }
 
   /**
+   * Helper to construct zip-filename
+   */
+  function getFileName(name){
+    return "consul-" + name + "-" +  + Math.floor(new Date() / 1000) + '.zip';
+  }
+  /**
    * Helper to set headers
    */
-  function setHeaders(type) {
+  function setHeaders(type, name = "") {
     var _headers = {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "GET",
@@ -46,7 +52,7 @@
     };
     if (type === "zip") {
       _headers["Content-Type"] = 'application/zip';
-      _headers["Content-disposition"] = 'attachment; filename=' + Math.floor(new Date() / 1000) + '.zip';
+      _headers["Content-disposition"] = 'attachment; filename=' + name;
     }
     _headers["Content-Type"] = "text/plain";
     return _headers;
@@ -66,12 +72,19 @@
     var _params = params(request);
     if (_params.set) {
       var _set = safePath(_params.set, response);
+      var _filename = getFileName(_set);
       if (fs.existsSync(_set)) {
         response.writeHead(200, setHeaders(""));
         response.write("#!/bin/bash\n" +
-          "echo You requested the set: " + _set + " and version: " + (_params.version || "0") + ". let me see if I can get it for you\n" +
-          "curl -s -k '" + getProtocol(request) + "://" + request.headers.host + "/?get=" + _set + "&format=zip' -o '" + _set + ".zip'\n" +
-          "unzip " + _set + ".zip\nls\n");
+          "echo [1] Requested assets for " + _set + "\n" +
+          "echo [2] Start download...\n" +
+          "curl -s -k '" + getProtocol(request) + "://" + request.headers.host + "/?get=" + _set + "&format=zip' -o '" + _filename + "'\n" +
+          "unzip -o " + _filename + "\n" + 
+          "echo [3] Download complete.\n" +
+          "echo [4] Precompiling assets...\n" +
+          "bin/rake assets:precompile" +
+          "echo [5] Process Finished\n"
+          );
         response.end();
       } else {
         response.writeHead(404, setHeaders(""));
