@@ -82,7 +82,7 @@
           "unzip -o " + _filename + "\n" + 
           "echo [3] Download complete.\n" +
           "echo [4] Precompiling assets...\n" +
-          "bin/rake assets:precompile" +
+          "bin/rake assets:precompile\n" +
           "echo [5] Process Finished\n"
           );
         response.end();
