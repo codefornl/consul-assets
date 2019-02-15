@@ -3,3 +3,5 @@ package-lock.json
 *.zip
 /app/
 /tmp/
+__MACOSX
+.DS_Store
