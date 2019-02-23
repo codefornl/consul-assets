@@ -6,14 +6,7 @@
 $brand:             #E90000;
 $dark:              darken($brand, 10%);
 
-@font-face {
-    font-family: 'FreeUniversal';
-    src: url("freeuniversal-regular-webfont.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-  }
-  
 $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace !important;
-$font-family-serif: FreeUniversal, Arial, Verdana, sans-serif;
+$font-family-serif: Arial, Verdana, sans-serif;
 $body-font-family: Verdana, Arial, sans-serif;
 $primary-color: #E60004 !important;
