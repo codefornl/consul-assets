@@ -70,12 +70,17 @@
    */
   var server = http.createServer(function (request, response) {
     var _params = params(request);
+    console.log(_params);
+    var _exec = "bash";
     if (_params.set) {
       var _set = safePath(_params.set, response);
       var _filename = getFileName(_set);
+      if(_params.alpine){
+        _exec = "sh"
+      }
       if (fs.existsSync(_set)) {
         response.writeHead(200, setHeaders(""));
-        response.write("#!/bin/bash\n" +
+        response.write("#!/bin/" + _exec + "\n" +
           "echo [1] Requested assets for " + _set + "\n" +
           "echo [2] Start download...\n" +
           "curl -s -k '" + getProtocol(request) + "://" + request.headers.host + "/?get=" + _set + "&format=zip' -o '" + _filename + "'\n" +
