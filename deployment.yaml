@@ -7,9 +7,9 @@ spec:
   clusterIP: None
   ports:
   - name: default
-    port: 42
+    port: 8080
     protocol: TCP
-    targetPort: 42
+    targetPort: 8080
   selector:
     workload.user.cattle.io/workloadselector: deployment-default-consul-assets-service-2
   sessionAffinity: None
