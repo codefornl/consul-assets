@@ -3,6 +3,17 @@ apiVersion: v1
 metadata:
   name: consul-assets-pipeline-2
   namespace: default
+spec:
+  clusterIP: None
+  ports:
+  - name: default
+    port: 42
+    protocol: TCP
+    targetPort: 42
+  selector:
+    workload.user.cattle.io/workloadselector: deployment-default-consul-assets-service-2
+  sessionAffinity: None
+  type: ClusterIP
 ---
 apiVersion: apps/v1
 kind: Deployment
