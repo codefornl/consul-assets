@@ -1,10 +1,8 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: consul-assets-pipeline
-spec:
-  selector:
-    app: consul-assets-service
+  name: consul-assets-pipeline-2
+  namespace: default
 ---
 apiVersion: apps/v1
 kind: Deployment
