@@ -4,7 +4,8 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: codefornl/consul-assets:latest
+      tag: consul-assets:latest
+      registry: 127.0.0.1:34667
 - name: Deploy
   steps:
   - applyYamlConfig:
