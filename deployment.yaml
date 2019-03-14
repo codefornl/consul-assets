@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: consul-assets-pipeline-2
+  name: consul-assets-service-new
   namespace: default
 spec:
   clusterIP: None
@@ -10,8 +10,8 @@ spec:
     port: 8080
     protocol: TCP
     targetPort: 8080
-  selector:
-    workload.user.cattle.io/workloadselector: deployment-default-consul-assets-service-2
+  workload:
+    target: consul-assets-service
   sessionAffinity: None
   type: ClusterIP
 ---
