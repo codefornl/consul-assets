@@ -10,8 +10,6 @@ spec:
     port: 8080
     protocol: TCP
     targetPort: 8080
-  workload:
-    target: consul-assets-service
   sessionAffinity: None
   type: ClusterIP
 ---
