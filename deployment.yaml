@@ -1,0 +1,38 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: consul-assets-service-new
+  namespace: default
+spec:
+  clusterIP: None
+  ports:
+  - name: default
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  sessionAffinity: None
+  type: ClusterIP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: consul-assets-service
+  labels:
+    app: consul-assets-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: consul-assets-service
+  template:
+    metadata:
+      labels:
+        app: consul-assets-service
+    spec:
+      imagePullSecrets:
+      - name: pipeline-docker-registry
+      containers:
+      - name: consul-assets-service
+        image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
+        ports:
+        - containerPort: 8080

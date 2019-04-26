@@ -1,0 +1,13 @@
+stages:
+- name: Build
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: consul-assets:${CICD_EXECUTION_SEQUENCE}
+      registry: 127.0.0.1:34667
+- name: Deploy
+  steps:
+  - applyYamlConfig:
+      path: ./deployment.yaml
+timeout: 60
