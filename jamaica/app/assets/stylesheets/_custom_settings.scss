@@ -9,15 +9,19 @@ $brand:             #FCD103;
 $brand-text: #282827;
 $dark:       #282827;
 $brand-border: #48A326;
-$highlight:      $dark;
-$brand-secondary: #48A326;
+$brand-secondary: #398e39;
 $brand-secondary-background: #fff;
 $footer-background: #282827;
 $button-background: $brand-secondary;
 $body-font-family: 'Open Sans', sans-serif;
 $header-font-family: 'Bitter', serif;
-$info-bg : #FEF3BF;
-$info-border: $info-bg;
+
+$budget:              $dark;
+$budget-dark:       $brand-secondary;
+$budget-text:       #fff;
+$budget-hover:      #7571bf;
+$budget-dark-text:  #fff;
+
 $color-info: $dark;
 .auth-image {
     border-top: 40px solid $dark;
@@ -26,21 +30,29 @@ $color-info: $dark;
       min-height: $line-height * 10;
     }
 }
-
+.submenu {
+    .is-active {
+        border-bottom: 2px solid $brand-secondary !important;
+        color: $brand-secondary !important;
+    }
+}
 .top-links {
     height: 40px;
 }
 .top-bar {
     padding: 0 0 0 1rem !important;
 }
-.row {
-    max-width: 100% !important;
-}
+
 .jumbo {
+    &.highlight {
+        background-color: $dark;
+        color: #fff;
+    }
     padding: 0 !important;
     margin-top: -1.5rem;
     .row {
         display: table;
+        max-width: 100% !important;
     }
     .column {
         padding: 1rem;
