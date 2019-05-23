@@ -1,0 +1,91 @@
+// Overrides and adds customized foundation settings in this file
+// Read more on documentation:
+// * English: https://github.com/consul/consul/blob/master/CUSTOMIZE_EN.md#css
+// * Spanish: https://github.com/consul/consul/blob/master/CUSTOMIZE_ES.md#css
+//
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Bitter');
+
+$brand:             #FCD103;
+$brand-text: #282827;
+$dark:       #282827;
+$brand-border: #48A326;
+$brand-secondary: #398e39;
+$brand-secondary-background: #fff;
+$footer-background: #282827;
+$button-background: $brand-secondary;
+$body-font-family: 'Open Sans', sans-serif;
+$header-font-family: 'Bitter', serif;
+
+$budget:              $dark;
+$budget-dark:       $brand-secondary;
+$budget-text:       #fff;
+$budget-hover:      #7571bf;
+$budget-dark-text:  #fff;
+
+$color-info: $dark;
+.auth-image {
+    border-top: 40px solid $dark;
+    background-image: none !important;
+    @include breakpoint(small) {
+      min-height: $line-height * 10;
+    }
+}
+.submenu {
+    .is-active {
+        border-bottom: 2px solid $brand-secondary !important;
+        color: $brand-secondary !important;
+    }
+}
+.top-links {
+    height: 40px;
+}
+.top-bar {
+    padding: 0 0 0 1rem !important;
+}
+
+.jumbo {
+    &.highlight {
+        background-color: $dark;
+        color: #fff;
+    }
+    padding: 0 !important;
+    margin-top: -1.5rem;
+    .row {
+        display: table;
+        max-width: 100% !important;
+    }
+    .column {
+        padding: 1rem;
+        display: table-cell;
+    }
+    .column:nth-child(1){
+        padding: 4rem;
+    }
+    .column:nth-child(2){
+        padding: 0;
+        margin: 0;
+    }
+    a.button {
+        background-color: $brand;
+        color: $brand-text;
+    }
+    img.margin {
+        margin: 0;
+    }
+    img {
+        height:100%;
+        width: auto;
+        max-width: none !important;
+    }
+
+}
+.background-header {
+    display: none;
+}
+@media only screen and (min-width: 0) and (max-width: 1005px) {
+  .jumbo {
+    img {
+      display:none;
+    }
+  }
+}
