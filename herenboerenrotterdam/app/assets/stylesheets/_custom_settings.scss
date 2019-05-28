@@ -1,0 +1,11 @@
+// Overrides and adds customized foundation settings in this file
+// Read more on documentation:
+// * English: https://github.com/consul/consul/blob/master/CUSTOMIZE_EN.md#css
+// * Spanish: https://github.com/consul/consul/blob/master/CUSTOMIZE_ES.md#css
+//
+// Google Fonts
+@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
+
+$brand: #008390;
+$dark: darken($brand, 10%);
+$body-font-family: "Sofia Pro",Times Regular,Arial,Helvetica,Verdana,sans-serif;
