@@ -4,7 +4,8 @@
 // * Spanish: https://github.com/consul/consul/blob/master/CUSTOMIZE_ES.md#css
 //
 
-$brand: #07838f;
+$brand: #fff;
+$brand-text: #07838f;
 $dark: darken($brand, 10%);
 $text: #000;
 $body-font-family: "Calibri",Verdana,sans-serif;
@@ -13,4 +14,21 @@ $brand-border: #07838f;
 $brand-secondary: #ee8609;
 $brand-secondary-background: #fff;
 $footer-background: #07838f;
+$footer-text: #fff;
+.top-bar .menu > li .button {
+    color: #fff !important;
+}
 
+.top-bar .menu .is-submenu-item a {
+    color: #fff !important;
+}
+
+footer a, footer a:active, footer a:focus {
+    color: #fff !important;
+}
+
+.jumbo {
+    h1 {
+        color: #07838f !important;
+    }
+}
