@@ -5,16 +5,25 @@
 //
 
 $brand: #fff;
+$brand-border: #07838f;
+$brand-secondary: #9C2F85;
+$brand-secondary-background: #fafafa;
+$primary-color: #07838f;
 $brand-text: #07838f;
 $dark: darken($brand, 10%);
-$text: #000;
-$body-font-family: "Calibri",Verdana,sans-serif;
-$header-font-family: $body-font-family;
-$brand-border: #07838f;
-$brand-secondary: #ee8609;
-$brand-secondary-background: #fff;
 $footer-background: #07838f;
 $footer-text: #fff;
+
+$text:              #222;
+$text-medium:       #515151;
+$text-light:        #bfbfbf;
+
+$body-font-family: "Calibri",Verdana,sans-serif;
+$header-font-family: $body-font-family;
+$body-font-size:     80% !important;
+$link:              $brand;
+$link-hover:        darken($link, 20%);
+
 .top-bar .menu > li .button {
     color: #fff !important;
 }
@@ -31,4 +40,55 @@ footer a, footer a:active, footer a:focus {
     h1 {
         color: #07838f !important;
     }
+}
+
+.subnavigation a {
+    color: $brand !important;
+}
+.menu.simple h2 {
+    color: #9C2F85 !important;
+}
+.menu.simple h2 a {
+    color: #9C2F85 !important;
+}
+header {
+    border-bottom: 3px solid #9C2F85 !important;
+    background: #fff !important;
+}
+.top-bar {
+    height: 180px !important;
+    background-color: #fff !important;
+    color: #9C2F85 !important;
+}
+.top-bar
+.top-bar-title a img{
+    height: 150px !important;
+}
+    .footer a{
+    color: #fff !important;
+}
+.top-links {
+    background-color: #07838f !important;
+}
+.footer {
+    color: #fff !important;
+}
+.button.expanded {
+    background-color: #9C2F85 !important;
+    color: #fff !important;
+}
+.button.hollow {
+    border: 1px solid #bfbfbf !important;
+    color: #fff !important;
+}
+.jumbo h1 {
+    color: #9C2F85 !important;
+}
+.auth-image {
+    background-color: #fff !important;
+    border-right: 3px solid #9C2F85 !important;
+    border-top: 15px solid $brand;
+    background-image: none !important;
+    min-height: $line-height * 10;
+    @include breakpoint(small) 
 }
