@@ -41,10 +41,14 @@ header {
     color: #9C2F85 !important;
 }
 .top-bar
+.menu > li a {
+    color: $brand-secondary !important;
+}
+.top-bar
 .top-bar-title a img{
     height: 150px !important;
 }
-    .footer a{
+.footer a{
     color: #fff !important;
 }
 .top-links {
