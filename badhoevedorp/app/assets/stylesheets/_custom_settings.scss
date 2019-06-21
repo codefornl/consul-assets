@@ -24,6 +24,7 @@ $link-hover:        darken($link, 20%);
 
 .subnavigation a {
     color: #07838f !important;
+    background-color: #fff !important;
 }
 .menu.simple h2 {
     color: #9C2F85 !important;
@@ -43,10 +44,13 @@ header {
 .top-bar
 .menu > li a {
     color: $brand-secondary !important;
+    background-color: #fff !important;
+
 }
 .top-bar
 .top-bar-title a img{
     height: 150px !important;
+    margin: 20px !important;
 }
 .footer a{
     color: #fff !important;
