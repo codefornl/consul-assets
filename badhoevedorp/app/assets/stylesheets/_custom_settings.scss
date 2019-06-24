@@ -32,6 +32,9 @@ $link-hover:        darken($link, 20%);
 .menu.simple h2 a {
     color: #9C2F85 !important;
 }
+.menu-icon {
+    background-color: #9C2F85 !important;
+}
 header {
     border-bottom: 3px solid #9C2F85 !important;
     background: #fff !important;
@@ -68,8 +71,15 @@ header {
 .button.hollow {
     border: 1px solid #bfbfbf !important;
 }
+.recommendations {
+    color:#fff !important;
+}
 .jumbo h1 {
     color: #9C2F85 !important;
+}
+.background-header {
+    -webkit-clip-path: ellipse(0%) !important;
+    clip-path: ellipse(0%) !important;
 }
 .auth-image {
     background-color: #fff !important;
