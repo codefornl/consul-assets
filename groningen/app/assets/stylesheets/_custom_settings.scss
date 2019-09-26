@@ -1,14 +1,72 @@
-$brand:             #E90000;
+// Overrides and adds customized foundation settings in this file
+// Read more on documentation:
+// * English: https://github.com/consul/consul/blob/master/CUSTOMIZE_EN.md#css
+// * Spanish: https://github.com/consul/consul/blob/master/CUSTOMIZE_ES.md#css
+$brand:             #259e8e;
+$brand-border:      $brand;
+$brand-secondary:   #554866;
+$brand-secondary-background: #fafafa;
+$primary-color: $brand;
+$brand-text:        #fff;
 $dark:              darken($brand, 10%);
-
+$footer-background: $brand;
+$footer-text: invert($footer-background);
+$header-background: #fff !important; 
+$top-background:   #fff !important;
+$text:              #222;
+$text-medium:       #515151;
+$text-light:        #bfbfbf;
 $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace !important;
 $font-family-serif: Arial, Verdana, sans-serif;
 $body-font-family: Verdana, Arial, sans-serif;
-$primary-color: #E60004 !important;
-$brand-border: #E60004;
-$footer-background: #E60004;
-$footer-text: #fff;
-$footer-text-hover: #fff;
+$header-font-family: $body-font-family;
+$body-font-size:     80% !important;
+$link:              $brand;
+$link-hover:        darken($link, 20%);
+
+.subnavigation a {
+    color: #259e8e !important;
+    background-color: #fff !important;
+}
+.menu.simple h2 {
+    color: #554866 !important;
+}
+.menu.simple h2 a {
+    color: #554866 !important;
+}
+.menu-icon.dark {
+    width: 40px !important;
+    height: 21px !important;
+}    
+.menu-icon {
+    background-color: #554866 !important;
+}
+header {
+    border-bottom: 3px solid #554866 !important;
+    background: #fff !important;
+}
+.top-bar {
+    height: 120px !important;
+    background-color: #fff !important;
+    color: #554866 !important;
+}
+.top-bar
+.menu > li a {
+    color: $brand-secondary !important;
+    background-color: #fff !important;
+
+}
+.top-bar
+.top-bar-title a img{
+    height: 100px !important;
+    margin: 20px !important;
+}
+.footer a{
+    color: #fff !important;
+}
+.top-links {
+    background-color: #259e8e !important;
+}
 footer {
   a,
   a:active,
@@ -37,6 +95,19 @@ $link-hover:        #000;
       }
     }
   }
+.footer {
+    color: #fff !important;
+}
+.button.expanded {
+    background-color: #554866 !important;
+    color: #fff !important;
+}
+.button.hollow {
+    border: 1px solid #bfbfbf !important;
+}
+.recommendations {
+    color:#fff !important;
+}   
 .jumbo {
     &.highlight {
         background-color: #fff;
@@ -66,10 +137,26 @@ $link-hover:        #000;
 .background-header {
     display: none;
 }
-
+.jumbo h1 {
+    color: #554866 !important;
+}
+.background-header {
+    -webkit-clip-path: ellipse(0%) !important;
+    clip-path: ellipse(0%) !important;
+}
+.quiz-next {
+    font-size: 1.3rem !important;
+}    
+.auth-image {
+    background-color: #fff !important;
+    border-right: 3px solid #554866 !important;
+    border-top: 15px solid $brand;
+    background-image: none !important;
+    min-height: $line-height * 10;
+    @include breakpoint(small) 
+}
 #categories-cloud { display: none; }
 #tag-cloud { display: none; }
 #map-block { display: none; }
 #retired-proposals { display: none; }
 #proposal-code { display: none; }
-
