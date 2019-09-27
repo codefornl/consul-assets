@@ -23,6 +23,11 @@ $header-font-family: $body-font-family;
 $body-font-size:     80% !important;
 $link:              $brand;
 $link-hover:        darken($link, 20%);
+$budget:            #554866;
+$budget-dark:       #259e8e;
+$budget-text:       #fff;
+$budget-hover:      #554866;
+$budget-dark-text:  #fff;
 
 .subnavigation a {
     color: #259e8e !important;
