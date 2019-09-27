@@ -165,3 +165,7 @@ $link-hover:        #000;
 #map-block { display: none; }
 #retired-proposals { display: none; }
 #proposal-code { display: none; }
+
+.budget-investment-show figure figcaption {
+    display: none !important;
+}
