@@ -3,4 +3,9 @@ nl:
     attributes:
       budget/investment:
         heading_id: Wijk
+    models:
+      budget/investment:
+        one: Idee
+        other: Ideeën
+    
     
