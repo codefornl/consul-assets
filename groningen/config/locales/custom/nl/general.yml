@@ -1,0 +1,7 @@
+nl:
+  users:
+    show:
+      filters:
+        budget_investments:
+          one: 1 idee
+          other: "%{count} ideeën"
