@@ -4,6 +4,9 @@ nl:
       budget/investment:
         heading_id: Wijk
     models:
+      budget:
+        one: Idee
+        other: Ideeën
       budget/investment:
         one: Idee
         other: Ideeën
