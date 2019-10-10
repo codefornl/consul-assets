@@ -1,3 +1,177 @@
-$brand:             #d18d2b;
+// Overrides and adds customized foundation settings in this file
+// Read more on documentation:
+// * English: https://github.com/consul/consul/blob/master/CUSTOMIZE_EN.md#css
+// * Spanish: https://github.com/consul/consul/blob/master/CUSTOMIZE_ES.md#css
+$brand:             #259e8e;
+$brand-border:      $brand;
+$brand-secondary:   #554866;
+$brand-secondary-background: #fafafa;
+$primary-color: $brand;
+$brand-text:        #fff;
 $dark:              darken($brand, 10%);
-$body-font-family: 'Lucida Sans Unicode', sans-serif !important;
+$footer-background: $brand;
+$footer-text: invert($footer-background);
+$header-background: #fff !important; 
+$top-background:   #fff !important;
+$text:              #222;
+$text-medium:       #515151;
+$text-light:        #bfbfbf;
+$font-family-monospace: Consolas, "Liberation Mono", Courier, monospace !important;
+$font-family-serif: Arial, Verdana, sans-serif;
+$body-font-family: Verdana, Arial, sans-serif;
+$header-font-family: $body-font-family;
+$body-font-size:     80% !important;
+$link:              $brand;
+$link-hover:        darken($link, 20%);
+$budget:            #554866;
+$budget-dark:       #259e8e;
+$budget-text:       #fff;
+$budget-hover:      #554866;
+$budget-dark-text:  #fff;
+
+.subnavigation a {
+    color: #259e8e !important;
+    background-color: #fff !important;
+}
+.menu.simple h2 {
+    color: #554866 !important;
+}
+.menu.simple h2 a {
+    color: #554866 !important;
+}
+.menu-icon.dark {
+    width: 40px !important;
+    height: 21px !important;
+}    
+.menu-icon {
+    background-color: #554866 !important;
+}
+header {
+    border-bottom: 3px solid #554866 !important;
+    background: #fff !important;
+}
+.top-bar {
+    height: 110px !important;
+    background-color: #fff !important;
+    color: #554866 !important;
+}
+.top-bar
+.menu > li a {
+    color: $brand-secondary !important;
+    background-color: #fff !important;
+
+}
+.top-bar
+.top-bar-title a img{
+    height: 100px !important;
+    margin: 5px !important;
+}
+.footer a{
+    color: #fff !important;
+}
+.top-links {
+    background-color: #259e8e !important;
+}
+footer {
+  a,
+  a:active,
+  a:focus {
+    color: $footer-text;
+    text-decoration: none !important;
+    &:hover {
+      color: $footer-text-hover;
+      text-decoration: underline !important;
+    }
+  }
+}
+$social-hover: $footer-text-hover;
+$link:              #000;
+$link-hover:        #000;
+.social {
+
+    a {
+      font-size: rem-calc(24);
+      margin: 0 $line-height / 2;
+      text-decoration: none;
+  
+      &:hover {
+        color: $social-hover;
+        text-decoration: underline !important;
+      }
+    }
+  }
+.footer {
+    color: #fff !important;
+}
+.button.expanded {
+    background-color: #554866 !important;
+    color: #fff !important;
+}
+.button.hollow {
+    border: 1px solid #bfbfbf !important;
+}
+.recommendations {
+    color:#fff !important;
+}   
+.jumbo {
+    &.highlight {
+        background-color: #fff;
+    }
+    h1::after {
+        background:  
+        linear-gradient(135deg, white 35%, transparent 25%) -25px 0,
+        linear-gradient(225deg, white 35%, transparent 25%) -25px 0,
+        linear-gradient(315deg, white 35%, transparent 25%),
+        linear-gradient(45deg, white 35%, transparent 25%);   
+        background-size: 50px 50px;
+        background-color: black;
+    }
+    a.button {
+        background-color: #554866;
+        color: #fff;
+    }
+    .row {
+        h1 {
+            color: #554866;
+        }
+        p {
+            color: #FCD02F;
+        }
+    }
+}
+.background-header {
+    display: none;
+}
+.jumbo h1 {
+    color: #554866 !important;
+}
+.background-header {
+    -webkit-clip-path: ellipse(0%) !important;
+    clip-path: ellipse(0%) !important;
+}
+.quiz-next {
+    font-size: 1.3rem !important;
+}    
+.auth-image {
+    background-color: #fff !important;
+    border-right: 3px solid #554866 !important;
+    border-top: 15px solid $brand;
+    background-image: none !important;
+    min-height: $line-height * 10;
+    @include breakpoint(small) 
+}
+#categories-cloud { display: none; }
+#tag-cloud { display: none; }
+#map-block { display: none; }
+#retired-proposals { display: none; }
+#proposal-code { display: none; }
+
+.budget-investment-show figure figcaption {
+    display: none !important;
+}
+#investment_code {
+    display: none !important;
+}
+.gradient {
+    background: none !important;
+}
