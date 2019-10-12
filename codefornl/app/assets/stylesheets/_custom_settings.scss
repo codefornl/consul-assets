@@ -1,1 +1,17 @@
-$brand:             #808284;
+$brand:             #fff;
+$brand-border:      #74C7A8;
+$brand-secondary:   #74C7A8;
+$brand-secondary-background: #fafafa;
+$primary-color: #74C7A8;
+.top-links {
+    background-color: #fff !important;
+}
+
+.top-bar .menu > li a {
+    color: #808284 !important;
+}
+
+.top-bar .menu > li a.button {
+    color: black !important;
+}
+
