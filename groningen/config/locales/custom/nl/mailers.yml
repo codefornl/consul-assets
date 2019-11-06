@@ -31,6 +31,8 @@ nl:
       hi: Beste deelnemer,
       thanks: Helaas heeft je idee niet genoeg stemmen gekregen om door te gaan. Heel erg bedankt voor het delen van je idee.
       sincerely: Groeten van de Coöperatieve Wijkraad
+    unfeasible_spending_proposal:
+      new_href: Idee helaas ongeschikt
     comment:
       subject: Iemand heeft gereageerd op je idee %{commentable}
       title: Iemand heeft gereageerd op je idee
