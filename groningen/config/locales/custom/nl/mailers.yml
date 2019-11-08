@@ -19,7 +19,8 @@ nl:
       share_button: Deel je idee
       sincerely: Groeten van de Coöperatieve Wijkraad
     budget_investment_unfeasible:
-      subject: Helaas, je idee is onhaalbaar
+      subject: Je idee '%{code}' is nagekeken. Het is helaas ongeschikt
+      title: Helaas, je idee is onhaalbaar
       hi: Beste deelnemer,
       new_html: 'De Coöperatieve Wijkraad heeft naar je idee gekeken. Helaas blijkt dat je idee niet haalbaar is. We leggen ook uit waarom. Je kunt je idee eventueel aanpassen: %{url}.'
       new_href: dat kan hier
