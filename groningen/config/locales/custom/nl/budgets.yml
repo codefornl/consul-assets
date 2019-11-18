@@ -1,0 +1,34 @@
+---
+nl:
+  budgets:
+    ballots:
+      show:
+        amount_spent: Uitgegeven
+        no_balloted_group_yet: U hebt nog niet gestemd op deze groep, stem nu!
+        remaining: U heeft nog <span>%{amount}</span> te spenderen.
+        remove: Verwijder keuze
+        title: Uw keuze
+        voted_html:
+          one: U heeft op <span>één</span> idee gestemd.
+          other: U heeft op <span>%{count}</span> ideeën gestemd.
+        voted_info_html: U te allen tijde uw stem wijzigen, tot de sluiting van deze fase.<br> U hoeft niet het héle bedrag uit te geven.
+        zero: U heeft op geen enkel idee gestemd.
+    investments:
+      index:
+        sidebar:
+          by_feasibility: Op haalbaarheid
+          change_ballot: Als u zich bedenkt kunt uw uw stemmen in %{check_ballot} verwijderen opnieuw beginnen.
+          check_ballot_link: check mijn stemming
+          create: Nieuw idee maken
+          different_heading_assigned_html: 'Je hebt al gestemd al op een ander deel van het budget: %{heading_link}'
+          feasible: Haalbare budgetten ideeën
+          my_ballot: Mijn stemmen
+          not_logged_in: Om een nieuw idee in te dienen moet je %{sign_in} of %{sign_up}.
+          sign_in: aanmelden
+          sign_up: registreren
+          unfeasible: Onhaalbare ideeën
+          verified_only: "%{verify} je account om een nieuw idee in te dienen."
+          verify_account: je account verifieren
+          voted_html:
+            one: "<strong>U heeft gestemd op een idee dat %{amount_spent} kost</strong>"
+            other: "<strong>U heeft gestemd op %{count} idee(ën) met een prijs van %{amount_spent}</strong>"
