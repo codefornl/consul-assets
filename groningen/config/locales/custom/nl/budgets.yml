@@ -32,4 +32,4 @@ nl:
           verify_account: je account verifieren
           voted_html:
             one: "<strong>U heeft gestemd op een idee dat %{amount_spent} kost</strong>"
-            other: "<strong>U heeft gestemd op %{count} idee(ën) met een prijs van %{amount_spent}</strong>"
+            other: "<strong>U heeft gestemd op %{count} ideeën met een prijs van %{amount_spent}</strong>"
